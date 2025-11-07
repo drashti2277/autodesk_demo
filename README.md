@@ -24,6 +24,12 @@ Built using `mcp.tool()` decorators and the official MCP Python SDK, this demo p
 ### Option 1: Standalone Demo (No Claude Desktop Needed!)
 Perfect for presentations - just run the demo script:
 
+**JavaScript/Node.js:**
+```bash
+npm run demo
+```
+
+**Python:**
 ```bash
 python standalone_demo.py
 ```
@@ -58,7 +64,8 @@ For interactive AI-powered workflows - see [Setup Guide](#with-claude-desktop) b
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.10 or higher
+- **JavaScript:** Node.js 18+ OR
+- **Python:** Python 3.10+
 - Git (for cloning)
 
 ### Installation
@@ -70,11 +77,25 @@ cd autodesk-mcp-demo
 ```
 
 2. **Install dependencies:**
+
+**JavaScript:**
+```bash
+npm install
+```
+
+**Python:**
 ```bash
 pip install -r requirements.txt
 ```
 
 3. **Run the standalone demo:**
+
+**JavaScript:**
+```bash
+npm run demo
+```
+
+**Python:**
 ```bash
 python standalone_demo.py
 ```

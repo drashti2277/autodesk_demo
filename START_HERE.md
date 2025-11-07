@@ -8,7 +8,7 @@
 cd /workspace
 git init
 git add .
-git commit -m "Autodesk MCP Server Demo with mcp.tool()"
+git commit -m "Autodesk MCP Server Demo (JavaScript + Python)"
 ```
 
 Then create a new repo on GitHub.com and:
@@ -25,10 +25,18 @@ git push -u origin main
 git clone https://github.com/YOUR_USERNAME/autodesk-mcp-demo.git
 cd autodesk-mcp-demo
 
-# Install dependencies
-pip install mcp
+# Install dependencies (choose JavaScript OR Python)
+```
 
-# Run the demo!
+**JavaScript:**
+```bash
+npm install
+npm run demo
+```
+
+**Python:**
+```bash
+pip install -r requirements.txt
 python standalone_demo.py
 ```
 
@@ -54,8 +62,17 @@ The standalone demo will show:
 
 ## Files to Know
 
+**JavaScript:**
+- `standalone-demo.js` ← **Run this!** (`npm run demo`)
+- `autodesk-mcp-server.js` ← **Show this code!**
+- `package.json` ← Configuration
+
+**Python:**
 - `standalone_demo.py` ← **Run this!**
 - `autodesk_mcp_server.py` ← **Show this code!**
+- `requirements.txt` ← Dependencies
+
+**Documentation:**
 - `README.md` ← **Share this!**
 - `SIMPLE_INSTRUCTIONS.md` ← **Read this for tips!**
 
