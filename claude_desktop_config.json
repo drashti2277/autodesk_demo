@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "autodesk-demo": {
+      "command": "python",
+      "args": [
+        "/workspace/autodesk_mcp_server.py"
+      ],
+      "metadata": {
+        "description": "Autodesk MCP Server Demo - Explore model data, calculate quantities, and get help"
+      }
+    }
+  }
+}
