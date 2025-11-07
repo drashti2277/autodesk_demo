@@ -19,6 +19,18 @@ This MCP server showcases the four key Autodesk MCP server concepts that Autodes
 
 Built using `mcp.tool()` decorators and the official MCP Python SDK, this demo proves developers can create production-grade MCP servers for Autodesk workflows right now!
 
+## 🚀 Two Ways to Run This Demo
+
+### Option 1: Standalone Demo (No Claude Desktop Needed!)
+Perfect for presentations - just run the demo script:
+
+```bash
+python standalone_demo.py
+```
+
+### Option 2: With Claude Desktop (Full AI Experience)
+For interactive AI-powered workflows - see [Setup Guide](#with-claude-desktop) below
+
 ## ✨ Key Features
 
 ### 🎨 Context-Aware Tools
@@ -47,13 +59,14 @@ Built using `mcp.tool()` decorators and the official MCP Python SDK, this demo p
 
 ### Prerequisites
 - Python 3.10 or higher
-- Claude Desktop or any MCP-compatible client
+- Git (for cloning)
 
 ### Installation
 
-1. **Clone or download this demo:**
+1. **Clone the repository:**
 ```bash
-cd /workspace
+git clone YOUR_GITHUB_REPO_URL
+cd autodesk-mcp-demo
 ```
 
 2. **Install dependencies:**
@@ -61,46 +74,55 @@ cd /workspace
 pip install -r requirements.txt
 ```
 
-3. **Configure Claude Desktop:**
+3. **Run the standalone demo:**
+```bash
+python standalone_demo.py
+```
 
-Add to your Claude Desktop config (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+That's it! 🎉 The demo will walk through all 9 demonstrations.
+
+### With Claude Desktop (Optional)
+
+If you want the full AI-powered experience:
+
+1. **Configure Claude Desktop:**
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 
 ```json
 {
   "mcpServers": {
     "autodesk-demo": {
-      "command": "python",
-      "args": [
-        "/workspace/autodesk_mcp_server.py"
-      ]
+      "command": "python3",
+      "args": ["/full/path/to/autodesk_mcp_server.py"]
     }
   }
 }
 ```
 
-4. **Restart Claude Desktop**
-
-5. **Start using it!** 🎉
-
-## 💡 Example Usage
-
-Once configured, you can ask Claude things like:
+2. **Restart Claude Desktop and try:**
 
 ```
-"What Autodesk models do I have available?"
-
-"Tell me about the office building model"
-
-"Calculate material quantities for the warehouse"
-
-"Compare the office building with the residential home"
-
-"Generate a cost estimate report for the office building"
-
-"How do I get started with Revit families?"
-
-"Search for all windows in the office building"
+"What Autodesk models are available?"
+"Analyze the office building"
+"Calculate materials for the warehouse"
 ```
+
+## 💡 Standalone Demo
+
+The `standalone_demo.py` script runs 9 demonstrations:
+
+1. **List Tools** - Show all 7 MCP tools
+2. **List Models** - Browse available files
+3. **Explore Model** - Analyze office building
+4. **Calculate Materials** - Material takeoff for warehouse
+5. **Compare Models** - Office vs residential
+6. **Generate Report** - Cost estimate
+7. **Search Components** - Find windows
+8. **Get Help** - Revit help content
+9. **Complex Workflow** - Multi-step AI orchestration
+
+Perfect for presentations without needing Claude Desktop!
 
 See [`demo_usage.md`](demo_usage.md) for comprehensive examples and demo scenarios!
 
